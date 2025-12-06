@@ -27,7 +27,7 @@ app.get('/', async(req, res) => {
 app.use('/api/ai/', aiRoutes);
 app.use('/api', todo);
 
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, () =>{
   console.log(`Server is running on port ${PORT}`); 

@@ -10,7 +10,6 @@ export default function useTasks() {
   useEffect(() => {
     const fetchTasks = async () => {
       try{
-        console.log("server url", import.meta.env.VITE_SERVER_URL)
       const response = await fetch(`${import.meta.env.VITE_SERVER_URL}todos`);
       const data = await response.json();
       dispatch(setTasks(data));

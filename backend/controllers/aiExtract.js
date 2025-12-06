@@ -13,7 +13,7 @@ export const extractdata = async (req, res) => {
     const inputText = `extract the data from given text and give the answer in JSON formate, only give the answer don't add anything extra, this is the example text : Create a high priority task to review the pull request for the authentication
 module by tomorrow evening and this is the expected output output : { "title": "Review the pull request for the authentication module",
 "priority": "high",
-"dueDate": "2025-12-15 T 6:00 PM",
+"dueDate": "2025-12-15",
 "status": "toDo"
 }
 Title: The main task description,

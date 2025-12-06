@@ -80,10 +80,12 @@ export default function Task() {
         return;
       }
       const task = JSON.parse(data.task);
-
+      console.log("Extracted Task:", task);
       setFormData({
         title: task.title || "",
-        dueDate: task.dueDate || "",
+        dueDate:task.dueDate.includes("T")
+  ? task.dueDate.split("T")[0].trim()
+  : task.dueDate.split(" ")[0].trim() || "",
         priority: task.priority || "medium",
         status: task.status || "todo",
       });
